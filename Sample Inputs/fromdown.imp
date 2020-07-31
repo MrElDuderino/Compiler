@@ -1,0 +1,46 @@
+[ fromdown.imp - zakresy petli ]
+DECLARE
+	a, b, c
+BEGIN 
+	c ASSIGN 100;
+
+[ positive positive ]
+	a ASSIGN 10001;
+	b ASSIGN 1;
+	FOR i FROM a TO b DO
+		a ASSIGN a PLUS c;
+	ENDFOR
+	WRITE a;
+	
+	FOR i FROM b DOWNTO a DO
+		a ASSIGN a PLUS c;
+	ENDFOR
+	WRITE a;
+
+[ negative negative ]
+    a ASSIGN -10001;
+	b ASSIGN -1;
+	FOR i FROM b TO a DO
+		a ASSIGN a PLUS c;
+	ENDFOR
+	WRITE a;
+	
+	FOR i FROM a DOWNTO b DO
+		a ASSIGN a PLUS c;
+	ENDFOR
+	WRITE a;
+
+[ negative positive ]
+    a ASSIGN -5001;
+	b ASSIGN 4999;
+	FOR i FROM b TO a DO
+		a ASSIGN a PLUS c;
+	ENDFOR
+	WRITE a;
+	
+	FOR i FROM a DOWNTO b DO
+		a ASSIGN a PLUS c;
+	ENDFOR
+	WRITE a;
+END
+

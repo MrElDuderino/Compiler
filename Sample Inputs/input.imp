@@ -1,0 +1,8 @@
+DECLARE
+	a, b
+BEGIN
+
+	a ASSIGN -4 DIV 3;
+	WRITE a;
+
+END
